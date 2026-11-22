@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Downloads – Epsilon's World</title>
-<meta name="description" content="Official downloads from Epsilon's World (EpsilonsWorld.com): Epsilon's CD Player for the Amiga and Epsilon's AP30 Music Boy Sync for macOS.">
+<meta name="description" content="Official downloads from Epsilon's World (EpsilonsWorld.com): Amiga and Mac software, music by Epsilon, and the demos of The Experience.">
 <meta name="robots" content="noai, noimageai">
 <link rel="icon" href="images/favicon.png">
 <style>
@@ -63,7 +63,7 @@
   .gallery figcaption{font-size:12.5px;color:#555;line-height:1.4;margin-top:4px}
   table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0 12px}
   td,th{text-align:left;padding:6px 8px;border-bottom:1px solid #e3e5ec;vertical-align:top} th{width:34%;color:#444}
-  .filter{display:flex;gap:6px;margin:0 0 16px}
+  .filter{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
   .filter button{font:bold 13.5px Arial,Helvetica,sans-serif;padding:7px 16px;border-radius:20px;border:1px solid #9aa3bd;background:#eef1f8;color:#1f3c8f;cursor:pointer}
   .filter button.on{background:#1f3c8f;color:#fff;border-color:#1f3c8f}
   h2.plat{font-size:13.5px;text-transform:uppercase;letter-spacing:.12em;color:#5f6268;margin:4px 0 10px;display:flex;align-items:center;gap:10px}
@@ -76,6 +76,47 @@
   .pair img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.55)}
   .amiga-hero .s{margin-top:14px}
   [hidden]{display:none!important}
+  .dl.small .btn{padding:9px 14px;font-size:14px}
+  .btn.grey{background:#5b6075;box-shadow:0 2px 0 #3e4254} .btn.grey:hover{background:#4d5165}
+  .scene{background:#07060d linear-gradient(180deg,#120d24,#07060d 340px);color:#d8d9e6;border:1px solid #2b1d55}
+  .scene a{color:#b59bff} .scene a:hover{color:#d7c9ff}
+  .scene h1{color:#fff;font-size:26px;margin:0;letter-spacing:.02em}
+  .scene .tag{color:#7be08f;font-size:13.5px;letter-spacing:.05em}
+  .scene-head{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+  .scene-head .torus{flex:none;border-radius:8px}
+  .scene .banner{display:block;width:100%;max-width:556px;height:auto;margin:22px auto 14px;border-radius:6px}
+  .scene .fine2{font-size:13px;color:#a9abbb}
+  .prod{display:grid;grid-template-columns:240px 1fr;gap:18px;padding:16px;margin:0 0 16px;background:rgba(255,255,255,.04);border:1px solid #2b2840;border-radius:10px}
+  .prod .shot{width:100%;height:auto;border-radius:6px;border:1px solid #333}
+  .prod h3{margin:0 0 2px;color:#fff;font-size:20px}
+  .yr{font-size:13px;font-weight:normal;color:#7be08f;margin-left:6px}
+  .prod .meta,.album .meta{font-size:13.5px;color:#a9abbb;margin:2px 0 8px}
+  .scene .meta b{color:#e5e6f0}
+  .cred{font-size:13.5px;margin:6px 0 8px} .cred th,.cred td{border-bottom:1px solid #2b2840;padding:3px 8px 3px 0;color:#d8d9e6;background:none}
+  .cred th{color:#a9abbb;font-weight:normal;width:46%}
+  .prod .am{font-size:12.5px;color:#a9abbb;margin-top:6px}
+  .members{list-style:none;padding:0;margin:0 0 8px;columns:2;column-gap:24px;font-size:14px}
+  .members li{break-inside:avoid;margin:0 0 6px}
+  .members b{color:#fff}
+  .hist summary{cursor:pointer;color:#b59bff;font-weight:bold;margin:0 0 8px}
+  .hist dl{margin:6px 0 0;font-size:14px} .hist dt{color:#7be08f;font-weight:bold;margin-top:10px} .hist dd{margin:2px 0 0 0}
+  .memorial{display:flex;gap:14px;align-items:center;margin:20px 0 10px;padding:12px 14px;border:1px solid #4b3a86;border-radius:10px;background:rgba(106,63,196,.12)}
+  .memorial img{flex:none}
+  .memorial p{margin:0}
+  .album{display:grid;grid-template-columns:177px 1fr;gap:6px 18px;margin:18px 0 8px;padding-top:16px;border-top:1px solid #e3e5ec}
+  .album .cover{border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+  .album h3{margin:0;font-size:19px;color:#1b2a55}
+  .album p{font-size:14px}
+  .tracks{grid-column:1/-1;list-style:none;padding:0;margin:8px 0 0;columns:2;column-gap:18px}
+  .tracks li{display:flex;align-items:center;break-inside:avoid;border-bottom:1px solid #eef0f6}
+  .tr{flex:1;display:flex;gap:10px;align-items:baseline;text-align:left;background:none;border:0;padding:7px 4px;font:14px Arial,Helvetica,sans-serif;color:#222;cursor:pointer}
+  .tr:hover{background:#f1f3fa} .tr .no{color:#8a8fa3;font-size:12.5px;width:20px} .tr .ti{flex:1} .tr .du{color:#8a8fa3;font-size:12.5px}
+  .tr.playing{background:#e6ecfb;color:#1f3c8f;font-weight:bold} .tr.playing .no::before{content:"\25B6 ";}
+  .guest{font-size:12px;color:#6a3fc4;font-weight:normal}
+  .tdl{padding:4px 8px;color:#6b7186;text-decoration:none;font-weight:bold} .tdl:hover{color:#1f3c8f;text-decoration:none}
+  .player{position:sticky;top:8px;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#1f3c8f;color:#fff;border-radius:10px;padding:8px 12px;margin:10px 0}
+  .player .now{font-weight:bold;font-size:14px;flex:1;min-width:160px}
+  .player audio{width:100%;max-width:420px;height:36px}
   /* sidebar */
   aside section{margin-bottom:26px;font-size:14.5px}
   aside p{margin:0 0 10px}
@@ -84,7 +125,7 @@
   footer{text-align:center;font-size:13px;color:#444;padding:6px 0 4px}
   @media (max-width:860px){
     body{padding:10px 6px 24px} .outer{padding:8px;border-radius:12px} .cols{grid-template-columns:minmax(0,1fr);padding:0 2px} .stage{height:230px} .ap30{height:195px} .mac{top:44px}
-    .hero .t{font-size:22px} .hero{padding:16px 10px 16px} .pair{grid-template-columns:1fr} .gallery{grid-template-columns:1fr} .card{padding:16px 16px 20px}
+    .hero .t{font-size:22px} .hero{padding:16px 10px 16px} .pair{grid-template-columns:1fr} .prod{grid-template-columns:1fr} .members{columns:1} .tracks{columns:1} .album{grid-template-columns:120px 1fr} .album .cover{width:120px;height:auto} .gallery{grid-template-columns:1fr} .card{padding:16px 16px 20px}
   }
 </style>
 </head>
@@ -96,7 +137,7 @@
     <main>
       <div class="date">Downloads</div>
       <nav class="filter" aria-label="Show downloads for">
-        <button data-show="all" class="on">All</button><button data-show="amiga">Amiga</button><button data-show="mac">Mac</button>
+        <button data-show="all" class="on">All</button><button data-show="amiga">Amiga</button><button data-show="mac">Mac</button><button data-show="music">Music</button><button data-show="demoscene">Demoscene</button>
       </nav>
 
       <section class="platform" id="amiga" data-platform="amiga">
@@ -237,6 +278,155 @@ bash install.sh</pre></li>
         <p class="fine">By Epsilon / <a href="https://www.epsilonsworld.com">EpsilonsWorld.com</a>, with the assistance of Claude AI. Hidizs and AP30 Music Boy are trademarks of their owner; Apple, Mac, macOS, iTunes and Music are trademarks of Apple Inc. This program is independent and not affiliated with Hidizs or Apple.</p>
       </article>
       </section>
+
+      <section class="platform" id="music" data-platform="music">
+      <h2 class="plat"><span>Music</span></h2>
+
+      <article class="card" id="epsilon-music">
+        <h1>Music by Epsilon</h1>
+        <p>Techno written in Impulse Tracker on the PC in the 2000s, carrying on from the Amiga modules of The Experience days. Click a track to listen here, or download the whole album.</p>
+        <div class="player" id="player" hidden>
+          <span class="now" id="nowPlaying"></span>
+          <audio id="audio" controls preload="none"></audio>
+        </div>
+
+        <div class="album" id="illumination">
+          <img class="cover" src="music/illumination/cover.jpg" alt="Illumination cover" width="177" height="173" loading="lazy">
+          <div class="ainfo">
+            <h3>Illumination <span class="yr">2005</span></h3>
+            <div class="meta">11 tracks · 34 min · Techno · MP3 192 kbps</div>
+            <p>An album of eleven tracks, ending with <i>Terminal 2000</i>. <i>Tidal</i> features guest traksion.</p>
+            <a class="btn" href="music/Epsilon-Illumination.zip" download><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Download album<small>ZIP · 46 MB</small></span></a>
+          </div>
+          <ol class="tracks">
+<li><button class="tr" data-src="music/illumination/01-enigma.mp3" aria-label="Play Enigma"><span class="no">01</span><span class="ti">Enigma</span><span class="du">3:19</span></button><a class="tdl" href="music/illumination/01-enigma.mp3" download title="Download Enigma (MP3)" aria-label="Download Enigma">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/02-bottle-it.mp3" aria-label="Play Bottle It"><span class="no">02</span><span class="ti">Bottle It</span><span class="du">3:37</span></button><a class="tdl" href="music/illumination/02-bottle-it.mp3" download title="Download Bottle It (MP3)" aria-label="Download Bottle It">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/03-give-it-to-me.mp3" aria-label="Play Give it to me"><span class="no">03</span><span class="ti">Give it to me</span><span class="du">2:25</span></button><a class="tdl" href="music/illumination/03-give-it-to-me.mp3" download title="Download Give it to me (MP3)" aria-label="Download Give it to me">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/04-guest-room.mp3" aria-label="Play Guest Room"><span class="no">04</span><span class="ti">Guest Room</span><span class="du">3:09</span></button><a class="tdl" href="music/illumination/04-guest-room.mp3" download title="Download Guest Room (MP3)" aria-label="Download Guest Room">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/05-shout-it-out.mp3" aria-label="Play Shout it Out"><span class="no">05</span><span class="ti">Shout it Out</span><span class="du">3:21</span></button><a class="tdl" href="music/illumination/05-shout-it-out.mp3" download title="Download Shout it Out (MP3)" aria-label="Download Shout it Out">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/06-illumination.mp3" aria-label="Play Illumination"><span class="no">06</span><span class="ti">Illumination</span><span class="du">3:22</span></button><a class="tdl" href="music/illumination/06-illumination.mp3" download title="Download Illumination (MP3)" aria-label="Download Illumination">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/07-nite-life.mp3" aria-label="Play Nite Life"><span class="no">07</span><span class="ti">Nite Life</span><span class="du">2:16</span></button><a class="tdl" href="music/illumination/07-nite-life.mp3" download title="Download Nite Life (MP3)" aria-label="Download Nite Life">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/08-tidal.mp3" aria-label="Play Tidal"><span class="no">08</span><span class="ti">Tidal <span class="guest">with traksion</span></span><span class="du">3:59</span></button><a class="tdl" href="music/illumination/08-tidal.mp3" download title="Download Tidal (MP3)" aria-label="Download Tidal">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/09-you-give-it-all.mp3" aria-label="Play You give it all"><span class="no">09</span><span class="ti">You give it all</span><span class="du">3:11</span></button><a class="tdl" href="music/illumination/09-you-give-it-all.mp3" download title="Download You give it all (MP3)" aria-label="Download You give it all">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/10-flow.mp3" aria-label="Play Flow"><span class="no">10</span><span class="ti">Flow</span><span class="du">2:45</span></button><a class="tdl" href="music/illumination/10-flow.mp3" download title="Download Flow (MP3)" aria-label="Download Flow">&#8595;</a></li>
+<li><button class="tr" data-src="music/illumination/11-terminal-2000.mp3" aria-label="Play Terminal 2000"><span class="no">11</span><span class="ti">Terminal 2000</span><span class="du">3:12</span></button><a class="tdl" href="music/illumination/11-terminal-2000.mp3" download title="Download Terminal 2000 (MP3)" aria-label="Download Terminal 2000">&#8595;</a></li>
+          </ol>
+        </div>
+
+        <div class="album" id="view-of-life">
+          <img class="cover" src="music/view-of-life/cover.jpg" alt="View of Life EP cover" width="177" height="173" loading="lazy">
+          <div class="ainfo">
+            <h3>View of Life EP <span class="yr">2004</span></h3>
+            <div class="meta">6 tracks · 17 min · Techno · MP3 192 kbps</div>
+            <p>A six-track EP.</p>
+            <a class="btn" href="music/Epsilon-View-of-Life-EP.zip" download><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Download album<small>ZIP · 24 MB</small></span></a>
+          </div>
+          <ol class="tracks">
+<li><button class="tr" data-src="music/view-of-life/01-coaster.mp3" aria-label="Play Coaster"><span class="no">01</span><span class="ti">Coaster</span><span class="du">3:47</span></button><a class="tdl" href="music/view-of-life/01-coaster.mp3" download title="Download Coaster (MP3)" aria-label="Download Coaster">&#8595;</a></li>
+<li><button class="tr" data-src="music/view-of-life/02-stellar.mp3" aria-label="Play Stellar"><span class="no">02</span><span class="ti">Stellar</span><span class="du">2:10</span></button><a class="tdl" href="music/view-of-life/02-stellar.mp3" download title="Download Stellar (MP3)" aria-label="Download Stellar">&#8595;</a></li>
+<li><button class="tr" data-src="music/view-of-life/03-finally.mp3" aria-label="Play Finally"><span class="no">03</span><span class="ti">Finally</span><span class="du">2:57</span></button><a class="tdl" href="music/view-of-life/03-finally.mp3" download title="Download Finally (MP3)" aria-label="Download Finally">&#8595;</a></li>
+<li><button class="tr" data-src="music/view-of-life/04-view-of-life.mp3" aria-label="Play View of Life"><span class="no">04</span><span class="ti">View of Life</span><span class="du">3:28</span></button><a class="tdl" href="music/view-of-life/04-view-of-life.mp3" download title="Download View of Life (MP3)" aria-label="Download View of Life">&#8595;</a></li>
+<li><button class="tr" data-src="music/view-of-life/05-rising-sun.mp3" aria-label="Play Rising Sun"><span class="no">05</span><span class="ti">Rising Sun</span><span class="du">3:01</span></button><a class="tdl" href="music/view-of-life/05-rising-sun.mp3" download title="Download Rising Sun (MP3)" aria-label="Download Rising Sun">&#8595;</a></li>
+<li><button class="tr" data-src="music/view-of-life/06-destiny.mp3" aria-label="Play Destiny"><span class="no">06</span><span class="ti">Destiny</span><span class="du">2:35</span></button><a class="tdl" href="music/view-of-life/06-destiny.mp3" download title="Download Destiny (MP3)" aria-label="Download Destiny">&#8595;</a></li>
+          </ol>
+        </div>
+        <div class="warn"><b>Music licence.</b> © 2004–2005 Steven Jeffery (AKA Epsilon) / EpsilonsWorld.com. Free to listen and to share for personal, non-commercial use, unchanged and credited. Please do not sell it, use it in a commercial product, or remix, sample or edit it without written permission.</div>
+        <p class="fine">Also on <a href="https://soundcloud.com/epsilonaus">SoundCloud</a>.</p>
+      </article>
+      </section>
+
+      <section class="platform" id="demoscene" data-platform="demoscene">
+      <h2 class="plat"><span>Demoscene</span></h2>
+
+      <article class="card scene" id="the-experience">
+        <div class="scene-head">
+          <img class="torus" src="images/exp-torus.gif" alt="The Experience rotating torus logo" width="100" height="100">
+          <div>
+            <h1>The Experience</h1>
+            <div class="tag">Amiga demo group · Adelaide, Australia · 1997–1999</div>
+          </div>
+        </div>
+        <p>The Experience was an Amiga demo group founded by Epsilon with friends from Adelaide University. Its foundation meeting was on 3 April 1997, and the group met weekly to code on Amiga 1200s in Mark's dorm room, often finishing the night with fish and chips from the Blue &amp; White in North Adelaide. It released two AGA demos: <b>T.L.A.</b> at Coven '97 in Adelaide and <b>terminal</b> at Remedy '98, where it placed 4th. The group ceased Amiga demo work in October 1999.</p>
+        <p class="fine2">The demos, music and source below are the original archives, exactly as released to Aminet in 1997–98. They need a real AGA Amiga or an emulator such as WinUAE or FS-UAE.</p>
+
+        <img class="banner" src="images/exp-demos.gif" alt="Demos" width="556" height="148" loading="lazy">
+
+        <div class="prod" id="terminal">
+          <img class="shot px" src="images/exp-terminal.gif" alt="terminal by The Experience" width="320" height="256" loading="lazy">
+          <div>
+            <h3>terminal <span class="yr">1998</span></h3>
+            <div class="meta">Released at <b>Remedy '98</b> · <b>4th place</b></div>
+            <p>Over a year's work, with no effects carried over from T.L.A. Epsilon designed the effects, Axon spent a month coding and perfecting them, and the synchronisation was finished over one Saturday night by Axon, Epsilon and traksion. Mesh took the demo to the party.</p>
+            <table class="cred">
+              <tr><th>Code, 3D</th><td>Axon</td></tr>
+              <tr><th>Design, intro music, graphics</th><td>Epsilon</td></tr>
+              <tr><th>Main music, pixel art</th><td>traksion</td></tr>
+              <tr><th>Graphics, 3D animation</th><td>Mesh</td></tr>
+              <tr><th>End tune (S3M)</th><td>Nic</td></tr>
+            </table>
+            <div class="meta">Needs: AGA, 68020, hard disk, 8 MB Fast RAM (68030 and 16 MB recommended)</div>
+            <div class="dl small">
+              <a class="btn" href="archive/exp_term.lha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Demo<small>exp_term.lha · 2.8 MB</small></span></a>
+              <a class="btn alt" href="archive/term_int.lha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Intro music by Epsilon<small>term_int.lha · 263 KB</small></span></a>
+            </div>
+            <div class="am">On Aminet: <a href="https://aminet.net/package/demo/aga/exp_term">demo</a> · <a href="https://aminet.net/package/mods/demo/term_int">intro mod</a></div>
+          </div>
+        </div>
+
+        <div class="prod" id="tla">
+          <img class="shot px" src="images/exp-tla.png" alt="T.L.A. — Three Letter Acronym" width="400" height="217" loading="lazy">
+          <div>
+            <h3>T.L.A. <span class="yr">1997</span></h3>
+            <div class="meta">Three Letter Acronym · presented at <b>Coven '97</b>, Adelaide</div>
+            <p>The group's first demo, put together in a hurry and finished at the party itself — The Experience was the only Amiga group there.</p>
+            <table class="cred">
+              <tr><th>Code, raytracing</th><td>Raven (Mark, later Axon)</td></tr>
+              <tr><th>Music, graphics</th><td>Epsilon</td></tr>
+              <tr><th>Graphics</th><td>traksion</td></tr>
+            </table>
+            <div class="meta">Needs: AGA, 68020, 4 MB Fast RAM</div>
+            <div class="dl small">
+              <a class="btn" href="archive/exp_tla.lha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Demo<small>exp_tla.lha · 639 KB</small></span></a>
+              <a class="btn alt" href="archive/tla_main.lha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Main music by Epsilon<small>tla_main.lha · 155 KB</small></span></a>
+              <a class="btn grey" href="archive/tla_source.lha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Source code<small>tla_source.lha · 16 KB</small></span></a>
+            </div>
+            <div class="am">The source is Mark's assembler for most of the effects, released in 1998 under his handle Axiom; the data files are not included, so it can't be built into the full demo. On Aminet: <a href="https://aminet.net/package/demo/aga/exp_tla">demo</a> · <a href="https://aminet.net/package/mods/demo/tla_main">mod</a> · <a href="https://aminet.net/package/dev/src/tla_source">source</a></div>
+          </div>
+        </div>
+
+        <img class="banner" src="images/exp-members.gif" alt="Members" width="556" height="149" loading="lazy">
+        <ul class="members">
+          <li><b>Axon</b> (Mark Thompson) — code and 3D; earlier known as Raven and Axiom</li>
+          <li><b>Epsilon</b> (Steven Jeffery) — founder; music, design, organiser and web pages</li>
+          <li><b>traksion</b> — music and graphics</li>
+          <li><b>Mesh</b> — graphics and 3D</li>
+          <li><b>Nic</b> — music (S3M)</li>
+          <li><b>Dave</b> (b195) — web pages and Aminet uploads</li>
+        </ul>
+
+        <img class="banner" src="images/exp-history.gif" alt="History" width="556" height="149" loading="lazy">
+        <details class="hist">
+          <summary>Read the group's history, 1997–1999</summary>
+          <dl>
+            <dt>April 1997</dt><dd>Foundation meeting on 3 April: concepts for T.L.A. and the group's web page. Raven shows the first lens effect.</dd>
+            <dt>May–July 1997</dt><dd>Raven codes flame and texture-mapping effects; Epsilon finishes the demo and end-credit music.</dd>
+            <dt>August 1997</dt><dd>T.L.A. is finished at Coven '97 after days of sweating over graphics — "traksion is a miracle worker!" Nic joins on music.</dd>
+            <dt>September–December 1997</dt><dd>Mesh joins on graphics. Axiom (formerly Raven) shows gouraud-shaded 3D, bump mapping, tunnels and a new texture mapper. The web page gets a mirror on GeoCities, and storyboarding begins for "terminal".</dd>
+            <dt>January–April 1998</dt><dd>The terminal intro is completed. Mesh travels to Finland, ready to present the demo at a European party. Axiom also codes for Nuance's 40k intro, which places 5th at Symposium '98.</dd>
+            <dt>May–June 1998</dt><dd>terminal is completed: Epsilon designs the effects, Axon (another forced name change!) codes them, traksion writes the main mod. Released at Remedy '98, where it finishes 4th.</dd>
+            <dt>July–December 1998</dt><dd>A well-earned break. traksion's module for Jinx's demo wins at Coven '98; Epsilon and traksion write Impulse Tracker modules for a planned music disk.</dd>
+            <dt>1999</dt><dd>New Impulse Tracker tunes from Epsilon, including "Dominate". terminal is tested under WinUAE and runs well. In October 1999 the group ceases Amiga demo work.</dd>
+          </dl>
+        </details>
+
+        <div class="memorial">
+          <img src="images/exp-tv.gif" alt="" width="52" height="82">
+          <p><b>In memory of Mark Thompson (Axon)</b>, who wrote most of The Experience's code. Mark passed away on 29 September 2015. <a href="https://www.epsilonsworld.com/2015/09/the-loss-of-my-friend-mark.html">Read Epsilon's tribute to Mark</a>.</p>
+        </div>
+
+        <p class="fine2">© The Experience 1997–1998. Freely distributed since their release; shared here unchanged. As the original readme asked, please don't rip the graphics or music out of the demos — the modules are available separately here.</p>
+      </article>
+      </section>
     </main>
 
     <aside>
@@ -254,6 +444,16 @@ bash install.sh</pre></li>
         <h3 class="sub">Mac</h3>
         <ul>
           <li><a href="#ap30-music-boy-sync">Epsilon's AP30 Music Boy Sync</a></li>
+        </ul>
+        <h3 class="sub">Music</h3>
+        <ul>
+          <li><a href="#illumination">Illumination (2005)</a></li>
+          <li><a href="#view-of-life">View of Life EP (2004)</a></li>
+        </ul>
+        <h3 class="sub">Demoscene</h3>
+        <ul>
+          <li><a href="#terminal">The Experience — terminal (1998)</a></li>
+          <li><a href="#tla">The Experience — T.L.A. (1997)</a></li>
         </ul>
       </section>
       <section>
@@ -277,10 +477,27 @@ bash install.sh</pre></li>
     secs.forEach(function(s){s.hidden=!(p==='all'||s.dataset.platform===p)});
   }
   btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.show);try{history.replaceState(null,'',b.dataset.show==='all'?location.pathname:'#'+b.dataset.show)}catch(e){}})});
-  window.addEventListener('hashchange',function(){var el=document.getElementById(location.hash.slice(1)); if(el&&el.closest('.platform')&&el.closest('.platform').hidden){show('all'); el.scrollIntoView();}});
+  window.addEventListener('hashchange',function(){var hh=location.hash.slice(1); if(['amiga','mac','music','demoscene'].indexOf(hh)>=0){show(hh);return;} var el=document.getElementById(location.hash.slice(1)); if(el&&el.closest('.platform')&&el.closest('.platform').hidden){show('all'); el.scrollIntoView();}});
   var h=location.hash.slice(1);
-  if(h==='amiga'||h==='mac')show(h);
+  if(['amiga','mac','music','demoscene'].indexOf(h)>=0)show(h);
   else if(h){var el=document.getElementById(h); if(el){var sec=el.closest('.platform'); if(sec) show('all');}}
+})();
+</script>
+<script>
+(function(){
+  var audio=document.getElementById('audio'), bar=document.getElementById('player'), now=document.getElementById('nowPlaying');
+  if(!audio) return;
+  var btns=[].slice.call(document.querySelectorAll('.tr')), cur=-1;
+  function play(i){
+    if(i<0||i>=btns.length) return;
+    btns.forEach(function(b){b.classList.remove('playing')});
+    var b=btns[i]; cur=i; b.classList.add('playing');
+    var alb=b.closest('.album').querySelector('h3').firstChild.textContent.trim();
+    now.textContent=b.querySelector('.ti').firstChild.textContent.trim()+' \u2014 '+alb;
+    bar.hidden=false; audio.src=b.dataset.src; var p=audio.play(); if(p&&p.catch)p.catch(function(){});
+  }
+  btns.forEach(function(b,i){b.addEventListener('click',function(){ if(i===cur&&!audio.paused){audio.pause();} else if(i===cur){audio.play();} else play(i); })});
+  audio.addEventListener('ended',function(){ var n=cur+1; if(n<btns.length && btns[n].closest('.album')===btns[cur].closest('.album')) play(n); else btns[cur].classList.remove('playing'); });
 })();
 </script>
 </body>
