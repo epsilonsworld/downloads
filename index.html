@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Downloads – Epsilon's World</title>
+<meta name="description" content="Official downloads from Epsilon's World (EpsilonsWorld.com), including Epsilon's AP30 Music Boy Sync for macOS.">
+<meta name="robots" content="noai, noimageai">
+<link rel="icon" href="images/favicon.png">
+<style>
+  :root{
+    --link:#1f3c8f; --link-hover:#0b2266; --head:#5f6268; --text:#222;
+    --panel:rgba(206,212,228,.93); --card:#fff;
+  }
+  *{box-sizing:border-box}
+  html{background:#0b1b45 url(images/background.jpg) center top/cover}
+  body{margin:0;padding:28px 16px 40px;font:15px/1.6 Arial,Helvetica,sans-serif;color:var(--text)}
+  a{color:var(--link);text-decoration:none} a:hover{color:var(--link-hover);text-decoration:underline}
+  .outer{max-width:1180px;margin:0 auto;background:var(--panel);border-radius:18px;padding:16px;
+    box-shadow:0 2px 18px rgba(0,0,0,.45);
+    background-image:radial-gradient(ellipse at 20% 10%,rgba(255,255,255,.35),transparent 60%),radial-gradient(ellipse at 85% 70%,rgba(255,255,255,.25),transparent 55%)}
+  header a{display:block;border-radius:12px;overflow:hidden;line-height:0}
+  header img{width:100%;height:auto;display:block}
+  .cols{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:26px;margin-top:22px;padding:0 10px}
+  h2.side,.date{font-size:13.5px;font-weight:bold;text-transform:uppercase;color:var(--head);margin:0 0 8px;letter-spacing:.02em}
+  .date{color:#222}
+  .card{background:var(--card);border-radius:12px;padding:20px 26px 26px;box-shadow:0 1px 4px rgba(0,0,0,.15);margin-bottom:26px}
+  .card h1{font-size:22px;font-weight:normal;color:var(--link);margin:0 0 10px}
+  .card h3{font-size:17px;margin:22px 0 6px;color:#1b2a55}
+  .card p{margin:0 0 12px}
+  .ver{display:inline-block;font-size:12.5px;background:#e8ecf7;color:#33406a;border-radius:20px;padding:2px 10px;margin-left:6px;vertical-align:middle}
+  /* hero */
+  .hero{position:relative;background:radial-gradient(ellipse at 50% 40%,#2b1d55 0%,#120d24 60%,#07060d 100%);border-radius:10px;
+    padding:26px 18px 20px;margin:14px 0 18px;overflow:hidden;color:#fff;text-align:center}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,#6a3fc4,#2e9e48)}
+  .stage{position:relative;height:330px;max-width:640px;margin:0 auto}
+  .mac{position:absolute;left:0;top:62px;width:56%}
+  .lid{background:#0b0b10;border:7px solid #2a2a33;border-bottom-width:10px;border-radius:12px 12px 0 0;overflow:hidden}
+  .lid img{width:100%;display:block}
+  .base{height:14px;margin:0 -18px;background:linear-gradient(#c9cad3,#8d8e98);border-radius:0 0 16px 16px}
+  .ap30{position:absolute;right:0;top:0;height:280px}
+  .sync{position:absolute;left:52%;top:20px;width:20%}
+  .hero .t{font-size:30px;font-weight:800;line-height:1.15;margin-top:6px}
+  .hero .t span{color:#b59bff} .hero .t i{font-style:normal;color:#7be08f}
+  .hero .s{color:#cfd2e0;font-size:14px;margin-top:6px}
+  /* buttons */
+  .dl{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 6px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:9px;font-weight:bold;font-size:15.5px;
+    background:#2e9e48;color:#fff;box-shadow:0 2px 0 #1f7533}
+  .btn:hover{background:#278b3e;color:#fff;text-decoration:none}
+  .btn.alt{background:#6a3fc4;box-shadow:0 2px 0 #4c2b93} .btn.alt:hover{background:#5d36ad}
+  .btn small{display:block;font-weight:normal;font-size:12px;opacity:.9}
+  .btn svg{flex:none}
+  .fine{font-size:13px;color:#555}
+  ul{margin:0 0 12px;padding-left:22px} li{margin:3px 0}
+  ol.steps li{margin:6px 0}
+  code{font:13.5px Menlo,Consolas,monospace;background:#eef0f6;padding:1px 5px;border-radius:4px}
+  pre{background:#15161c;color:#d9dbe4;border-radius:8px;padding:12px 14px;font:13px/1.5 Menlo,Consolas,monospace;overflow-x:auto;margin:6px 0 12px}
+  .warn{background:#fff5e8;border-left:4px solid #e08a00;border-radius:6px;padding:10px 14px;margin:14px 0;font-size:14px}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+  .gallery a{display:block;border-radius:8px;overflow:hidden;border:1px solid #ccd;line-height:0}
+  .gallery img{width:100%;height:auto}
+  .gallery figcaption{font-size:12.5px;color:#555;line-height:1.4;margin-top:4px}
+  table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0 12px}
+  td,th{text-align:left;padding:6px 8px;border-bottom:1px solid #e3e5ec;vertical-align:top} th{width:34%;color:#444}
+  /* sidebar */
+  aside section{margin-bottom:26px;font-size:14.5px}
+  aside p{margin:0 0 10px}
+  aside ul{list-style:none;padding:0;margin:0} aside ul li{border-bottom:1px dashed #a9afc0;padding:4px 0;margin:0}
+  .logo{display:block;width:120px;border-radius:14px;margin:4px 0 10px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+  footer{text-align:center;font-size:13px;color:#444;padding:6px 0 4px}
+  @media (max-width:860px){
+    body{padding:10px 6px 24px} .outer{padding:8px;border-radius:12px} .cols{grid-template-columns:minmax(0,1fr);padding:0 2px} .stage{height:230px} .ap30{height:195px} .mac{top:44px}
+    .hero .t{font-size:22px} .hero{padding:16px 10px 16px} .gallery{grid-template-columns:1fr} .card{padding:16px 16px 20px}
+  }
+</style>
+</head>
+<body>
+<div class="outer">
+  <header><a href="https://www.epsilonsworld.com" title="Epsilon's World"><img src="images/banner.jpg" alt="Epsilon's World" width="1600" height="222"></a></header>
+
+  <div class="cols">
+    <main>
+      <div class="date">Downloads</div>
+
+      <article class="card" id="ap30-music-boy-sync">
+        <h1>Epsilon's AP30 Music Boy Sync <span class="ver" id="ver">Version 3.0</span></h1>
+        <p>A free Mac program that keeps the microSD card of a <b>Hidizs AP30 Music Boy</b> in sync with your music, the way iTunes used to sync an iPod. Build FLAC playlists, pick your Music app (iTunes) playlists, press <b>Sync now</b>, and the card is brought up to date — with cover art the AP30 can actually display.</p>
+
+        <div class="hero">
+          <div class="stage">
+            <div class="mac"><div class="lid"><img src="images/program-screen.jpg" alt="The program on a Mac"></div><div class="base"></div></div>
+            <svg class="sync" viewBox="0 0 220 120" aria-hidden="true">
+              <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#b59bff"/><stop offset="1" stop-color="#7be08f"/></linearGradient>
+              <marker id="ah" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7be08f"/></marker></defs>
+              <path d="M10,60 C70,10 150,10 205,55" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 13" marker-end="url(#ah)"/>
+              <g transform="translate(92,56)"><rect width="36" height="46" rx="4" fill="#20193d" stroke="#b59bff" stroke-width="2.5"/>
+              <path d="M6,0 v9 M12,0 v9 M18,0 v9 M24,0 v9 M30,0 v9" stroke="#b59bff" stroke-width="2"/>
+              <text x="18" y="36" text-anchor="middle" font-size="10" font-weight="700" fill="#7be08f" font-family="Arial">SD</text></g>
+            </svg>
+            <img class="ap30" src="images/ap30.png" alt="Hidizs AP30 Music Boy">
+          </div>
+          <div class="t">Epsilon's <span>AP30 Music Boy <i>Sync</i></span></div>
+          <div class="s">FLAC playlists · Music app playlists · Cover art · One-click sync</div>
+        </div>
+
+        <div class="dl">
+          <a class="btn" href="https://github.com/epsilonsworld/downloads/releases/latest/download/Epsilons-AP30-Music-Boy-Sync.zip">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg>
+            <span>Download for macOS<small>Program and manual · zip, about 6.5 MB</small></span></a>
+          <a class="btn alt" href="https://github.com/epsilonsworld/downloads/releases/latest/download/Epsilons-AP30-Music-Boy-Sync-Manual.pdf">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg>
+            <span>User manual<small>PDF, 26 pages</small></span></a>
+        </div>
+        <p class="fine">Freeware · No warranty of any kind — use at your own risk. Older versions and release notes: <a href="https://github.com/epsilonsworld/downloads/releases">all releases</a>.</p>
+
+        <h3>What it does</h3>
+        <ul>
+          <li><b>FLAC playlists</b> — browse your FLAC library with cover art, search it, listen, and build playlists by drag and drop.</li>
+          <li><b>Music app (iTunes) playlists</b> — tick the playlists you want on the player.</li>
+          <li><b>True sync</b> — only new and changed songs are copied; removed songs are removed; renamed playlists are re-tagged in place, not copied again.</li>
+          <li><b>Cover art that works</b> — every song gets a small JPEG cover the AP30 can show, from the file, the Music app, the album folder, or Apple's artwork search.</li>
+          <li><b>Fits the player</b> — shows space used and the AP30's track limit before you sync.</li>
+          <li><b>Safe</b> — your original music and Music app library are only ever read, never changed.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure style="margin:0"><a href="images/shot-playlists.jpg"><img src="images/shot-playlists.jpg" alt="Building playlists" loading="lazy"></a><figcaption>Building a FLAC playlist from the library.</figcaption></figure>
+          <figure style="margin:0"><a href="images/shot-sync_preview.jpg"><img src="images/shot-sync_preview.jpg" alt="Sync preview" loading="lazy"></a><figcaption>Checking the card before syncing.</figcaption></figure>
+          <figure style="margin:0"><a href="images/shot-sync_done.jpg"><img src="images/shot-sync_done.jpg" alt="Finished sync" loading="lazy"></a><figcaption>A finished sync, with its log.</figcaption></figure>
+          <figure style="margin:0"><a href="images/shot-settings.jpg"><img src="images/shot-settings.jpg" alt="Settings" loading="lazy"></a><figcaption>Settings.</figcaption></figure>
+        </div>
+
+        <h3>Requirements</h3>
+        <table>
+          <tr><th>Mac</th><td>Apple Silicon or Intel, macOS 11 Big Sur or later</td></tr>
+          <tr><th>Free tools</th><td>Homebrew, Python 3 with mutagen, ImageMagick (ffmpeg optional) — the manual shows how to install them</td></tr>
+          <tr><th>Player</th><td>Hidizs AP30 Music Boy (tested with firmware 1.7.8)</td></tr>
+          <tr><th>Card</th><td>microSD formatted FAT32, 256 GB or smaller recommended</td></tr>
+        </table>
+
+        <h3>Installing</h3>
+        <ol class="steps">
+          <li>Install the free tools (once): see chapter 3 of the manual.</li>
+          <li>Download the zip above. Safari unpacks it into a folder called <code>Epsilons-AP30-Music-Boy-Sync</code>; otherwise double-click the zip.</li>
+          <li>Open Terminal and run:
+<pre>cd ~/Downloads/Epsilons-AP30-Music-Boy-Sync
+bash install.sh</pre></li>
+          <li>The program opens in your browser. Next time, open <b>Epsilon's AP30 Music Boy Sync</b> from Launchpad or your Applications folder.</li>
+        </ol>
+        <p class="fine">Updating? Download the new version and run <code>bash install.sh</code> again — your settings and playlists are kept.</p>
+
+        <div class="warn"><b>Freeware licence.</b> Free to download and use for personal use. Not to be redistributed, sold or modified without written permission — please link to this page instead of sharing the file. <b>No warranty of any kind — use at your own risk.</b> Keep backups of your music. Full terms: <a href="LICENSE.txt">LICENSE.txt</a>.</div>
+
+        <p class="fine">By Epsilon / <a href="https://www.epsilonsworld.com">EpsilonsWorld.com</a>, with the assistance of Claude AI. Hidizs and AP30 Music Boy are trademarks of their owner; Apple, Mac, macOS, iTunes and Music are trademarks of Apple Inc. This program is independent and not affiliated with Hidizs or Apple.</p>
+      </article>
+    </main>
+
+    <aside>
+      <section>
+        <h2 class="side">About</h2>
+        <a href="https://www.epsilonsworld.com"><img class="logo" src="images/epsilon-logo.png" alt="Epsilon logo"></a>
+        <p>Software by Epsilon from Adelaide, Australia — Amiga, trains and computers in general. Read more on the blog at <a href="https://www.epsilonsworld.com">EpsilonsWorld.com</a>.</p>
+      </section>
+      <section>
+        <h2 class="side">Downloads</h2>
+        <ul>
+          <li><a href="#ap30-music-boy-sync">Epsilon's AP30 Music Boy Sync</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="side">Copyright notice</h2>
+        <p>All software, text and images on this page are copyright © 2026 Steven Jeffery (AKA Epsilon) / EpsilonsWorld.com.</p>
+        <p>Express written permission is required to reproduce them or to use them for AI training purposes.</p>
+      </section>
+      <section>
+        <h2 class="side">Back to the blog</h2>
+        <ul><li><a href="https://www.epsilonsworld.com">Epsilon's World home page</a></li></ul>
+      </section>
+    </aside>
+  </div>
+  <footer>© 2026 EpsilonsWorld.com · <a href="https://www.epsilonsworld.com">www.EpsilonsWorld.com</a></footer>
+</div>
+</body>
+</html>
