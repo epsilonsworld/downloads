@@ -117,6 +117,10 @@
   .player{position:sticky;top:8px;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#1f3c8f;color:#fff;border-radius:10px;padding:8px 12px;margin:10px 0}
   .player .now{font-weight:bold;font-size:14px;flex:1;min-width:160px}
   .player audio{width:100%;max-width:420px;height:36px}
+  .prod .video{grid-column:1/-1}
+  .vlabel{font-size:13.5px;font-weight:bold;color:#7be08f;margin:4px 0 6px;letter-spacing:.03em}
+  .vbox{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;border:1px solid #2b2840}
+  .vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   /* sidebar */
   aside section{margin-bottom:26px;font-size:14.5px}
   aside p{margin:0 0 10px}
@@ -370,6 +374,11 @@ bash install.sh</pre></li>
               <a class="btn alt" href="archive/term_int.lha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Intro music by Epsilon<small>term_int.lha · 263 KB</small></span></a>
             </div>
             <div class="am">On Aminet: <a href="https://aminet.net/package/demo/aga/exp_term">demo</a> · <a href="https://aminet.net/package/mods/demo/term_int">intro mod</a></div>
+          </div>
+          <div class="video">
+            <div class="vlabel">Watch terminal</div>
+            <div class="vbox"><iframe src="https://www.youtube-nocookie.com/embed/Xo_mrZe2Xns" title="terminal by The Experience (Amiga AGA demo, Remedy '98)" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            <div class="am">Can't see the video? <a href="https://www.youtube.com/watch?v=Xo_mrZe2Xns">Watch it on YouTube</a>.</div>
           </div>
         </div>
 
