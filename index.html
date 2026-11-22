@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Downloads – Epsilon's World</title>
-<meta name="description" content="Official downloads from Epsilon's World (EpsilonsWorld.com), including Epsilon's AP30 Music Boy Sync for macOS.">
+<meta name="description" content="Official downloads from Epsilon's World (EpsilonsWorld.com): Epsilon's CD Player for the Amiga and Epsilon's AP30 Music Boy Sync for macOS.">
 <meta name="robots" content="noai, noimageai">
 <link rel="icon" href="images/favicon.png">
 <style>
@@ -63,6 +63,19 @@
   .gallery figcaption{font-size:12.5px;color:#555;line-height:1.4;margin-top:4px}
   table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0 12px}
   td,th{text-align:left;padding:6px 8px;border-bottom:1px solid #e3e5ec;vertical-align:top} th{width:34%;color:#444}
+  .filter{display:flex;gap:6px;margin:0 0 16px}
+  .filter button{font:bold 13.5px Arial,Helvetica,sans-serif;padding:7px 16px;border-radius:20px;border:1px solid #9aa3bd;background:#eef1f8;color:#1f3c8f;cursor:pointer}
+  .filter button.on{background:#1f3c8f;color:#fff;border-color:#1f3c8f}
+  h2.plat{font-size:13.5px;text-transform:uppercase;letter-spacing:.12em;color:#5f6268;margin:4px 0 10px;display:flex;align-items:center;gap:10px}
+  h2.plat::after{content:"";flex:1;height:1px;background:#a9afc0}
+  aside h3.sub{font-size:12.5px;color:#5f6268;margin:10px 0 2px;text-transform:uppercase}
+  .px{image-rendering:pixelated}
+  .amiga-hero{background:radial-gradient(ellipse at 50% 40%,#1d2f7a 0%,#0c1440 60%,#050820 100%)}
+  .amiga-hero::after{background:linear-gradient(90deg,#ff8a00,#ffd600,#25c4ff)}
+  .pair{display:grid;grid-template-columns:42% 1fr;gap:16px;align-items:center;max-width:720px;margin:0 auto}
+  .pair img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.55)}
+  .amiga-hero .s{margin-top:14px}
+  [hidden]{display:none!important}
   /* sidebar */
   aside section{margin-bottom:26px;font-size:14.5px}
   aside p{margin:0 0 10px}
@@ -71,7 +84,7 @@
   footer{text-align:center;font-size:13px;color:#444;padding:6px 0 4px}
   @media (max-width:860px){
     body{padding:10px 6px 24px} .outer{padding:8px;border-radius:12px} .cols{grid-template-columns:minmax(0,1fr);padding:0 2px} .stage{height:230px} .ap30{height:195px} .mac{top:44px}
-    .hero .t{font-size:22px} .hero{padding:16px 10px 16px} .gallery{grid-template-columns:1fr} .card{padding:16px 16px 20px}
+    .hero .t{font-size:22px} .hero{padding:16px 10px 16px} .pair{grid-template-columns:1fr} .gallery{grid-template-columns:1fr} .card{padding:16px 16px 20px}
   }
 </style>
 </head>
@@ -82,6 +95,75 @@
   <div class="cols">
     <main>
       <div class="date">Downloads</div>
+      <nav class="filter" aria-label="Show downloads for">
+        <button data-show="all" class="on">All</button><button data-show="amiga">Amiga</button><button data-show="mac">Mac</button>
+      </nav>
+
+      <section class="platform" id="amiga" data-platform="amiga">
+      <h2 class="plat"><span>Amiga</span></h2>
+
+      <article class="card" id="epsilons-cd-player">
+        <h1>Epsilon's CD Player <span class="ver">Version 7.12 · CDPlay 4.12</span></h1>
+        <p>An audio CD player for every Amiga, from a Kickstart 1.3 A500 with 1 MB upwards. It plays audio CDs from SCSI and IDE CD-ROM drives in a window on the Workbench screen, remembers the titles of every disc, and comes with a Shell command and four full-screen visualizers.</p>
+
+        <div class="hero amiga-hero">
+          <div class="pair">
+            <img class="box" src="images/cdp-box-front.jpg" alt="Epsilon's CD Player box front" width="720" height="720">
+            <img class="px win" src="images/cdp-main-window.png" alt="The Epsilon's CD Player window" width="960" height="668">
+          </div>
+          <div class="s">Workbench 1.3 and up · SCSI and IDE drives · HiFi, LoFi, Forest and Demo visualizers</div>
+        </div>
+
+        <div class="dl">
+          <a class="btn" href="https://github.com/epsilonsworld/downloads/releases/download/cdplayer-v7.12/EpsilonsCDPlayer.lha"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Program archive<small>LHA, 714 KB · for a hard disk</small></span></a>
+          <a class="btn" href="https://github.com/epsilonsworld/downloads/releases/download/cdplayer-v7.12/EpsilonsCDPlayer.adf"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>Bootable floppy<small>ADF disk image, 880 KB</small></span></a>
+          <a class="btn" href="https://github.com/epsilonsworld/downloads/releases/download/cdplayer-v7.12/EpsilonsCDPlayer-CD.iso"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg><span>CD image<small>ISO, 3 MB · with the manual</small></span></a>
+          <a class="btn alt" href="https://github.com/epsilonsworld/downloads/releases/download/cdplayer-v7.12/EpsilonsCDPlayer-Manual.pdf"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg><span>User manual<small>PDF, 24 pages</small></span></a>
+        </div>
+        <p class="fine">Freeware · free to share unchanged, including on Aminet · No warranty of any kind — use at your own risk. Release notes: <a href="https://github.com/epsilonsworld/downloads/releases/tag/cdplayer-v7.12">version 7.12</a>.</p>
+
+        <h3>What it does</h3>
+        <ul>
+          <li><b>Plays audio CDs</b> from SCSI-2 drives on any SCSI controller (A590, A2091, GVP and others), early Toshiba SCSI drives and IDE (ATAPI) drives — and finds the drive by itself.</li>
+          <li><b>All the controls</b> — play/pause, stop, eject, track skip and search, track buttons up to 99 tracks, volume, Continue, Repeat, Shuffle, program play and A-B loop.</li>
+          <li><b>Disc titles</b> — album, artist, year and track titles typed straight into the window, recalled whenever the disc goes back in.</li>
+          <li><b>Scope</b> — waveform, 32-band spectrum and VU meters from a parallel-port sampler such as the GVP DSS8.</li>
+          <li><b>Four full-screen visualizers</b> using the Amiga's own copper, sprites and blitter.</li>
+          <li><b>CDPlay</b> — a Shell command version, with a DIAG command to check how a drive answers.</li>
+          <li><b>Small</b> — about 292K, no extra libraries, runs on a 68000 with Kickstart 1.3.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure style="margin:0"><a href="images/cdp-HiFi-visualizer.png"><img class="px" src="images/cdp-HiFi-visualizer.png" alt="HiFi visualizer" loading="lazy" width="960" height="756"></a><figcaption>HiFi — a stack of Epsilon hi-fi components.</figcaption></figure>
+          <figure style="margin:0"><a href="images/cdp-LoFi-visualizer.png"><img class="px" src="images/cdp-LoFi-visualizer.png" alt="LoFi visualizer" loading="lazy" width="960" height="756"></a><figcaption>LoFi — a late-night study over Adelaide at dusk.</figcaption></figure>
+          <figure style="margin:0"><a href="images/cdp-Forest-visualizer.png"><img class="px" src="images/cdp-Forest-visualizer.png" alt="Forest visualizer" loading="lazy" width="960" height="756"></a><figcaption>Forest — smooth parallax through a pine forest.</figcaption></figure>
+          <figure style="margin:0"><a href="images/cdp-Demo-visualizer.png"><img class="px" src="images/cdp-Demo-visualizer.png" alt="Demo visualizer" loading="lazy" width="960" height="756"></a><figcaption>Demo — old-school demoscene, with the Boing Ball.</figcaption></figure>
+        </div>
+
+        <h3>Requirements</h3>
+        <table>
+          <tr><th>Amiga</th><td>Any Amiga with Kickstart/Workbench 1.3 or later and 1 MB of memory (512K chip memory is enough)</td></tr>
+          <tr><th>CD-ROM drive</th><td>SCSI-2 on any SCSI controller, early Toshiba SCSI, or IDE (ATAPI) with a driver that takes SCSI commands. CDTV and A570 drives: experimental.</td></tr>
+          <tr><th>Sound</th><td>The drive's own audio outputs connected to an amplifier</td></tr>
+          <tr><th>Optional</th><td>A parallel-port sampler (GVP DSS8 or similar) for the scope and visualizers</td></tr>
+          <tr><th>Tested on</th><td>A500 (Workbench 1.3, A590), A2000, A3000, A4000T and A1200 (AmigaOS 3.1.4 and 3.2.2)</td></tr>
+        </table>
+
+        <h3>Which download?</h3>
+        <ul>
+          <li><b>Program archive (.lha)</b> — for a hard disk. Unpack it with LhA on the Amiga (or The Unarchiver on a Mac), drag the EpsilonsCDPlayer drawer to your hard disk and double-click EpsilonsCDPlayer. Includes the floppy image, the alternate icon sets and the C and assembler source.</li>
+          <li><b>Bootable floppy (.adf)</b> — for an Amiga without a hard disk. Write it to a floppy with ADFBlitzer or transdisk, or use it on a floppy emulator or in WinUAE/FS-UAE. It starts the player straight away.</li>
+          <li><b>CD image (.iso)</b> — everything plus the manual, to burn to a CD-R or use in an emulator.</li>
+        </ul>
+
+        <div class="warn"><b>Freeware licence.</b> Free to use, and free to copy and pass on — including on Aminet, cover disks, PD libraries and CD collections — as long as it is complete and unchanged and no more than a small fee for the media is charged. Not to be sold or included in commercial products, and modified versions not to be passed on, without written permission. <b>No warranty of any kind — use at your own risk.</b> Full terms are in the readme and the manual.</div>
+
+        <p class="fine">By Epsilon / <a href="https://www.epsilonsworld.com">EpsilonsWorld.com</a>, with the assistance of Claude AI. Forest artwork: "Pine Forest" by Marcin Rygulski (Digital Worlds Studio). LoFi cat: Cozy Cat Pixel Art Pack © FOTOPIXY. Amiga is a trademark of its respective owner.</p>
+      </article>
+      </section>
+
+      <section class="platform" id="mac" data-platform="mac">
+      <h2 class="plat"><span>Mac</span></h2>
 
       <article class="card" id="ap30-music-boy-sync">
         <h1>Epsilon's AP30 Music Boy Sync <span class="ver" id="ver">Version 3.0</span></h1>
@@ -154,6 +236,7 @@ bash install.sh</pre></li>
 
         <p class="fine">By Epsilon / <a href="https://www.epsilonsworld.com">EpsilonsWorld.com</a>, with the assistance of Claude AI. Hidizs and AP30 Music Boy are trademarks of their owner; Apple, Mac, macOS, iTunes and Music are trademarks of Apple Inc. This program is independent and not affiliated with Hidizs or Apple.</p>
       </article>
+      </section>
     </main>
 
     <aside>
@@ -164,6 +247,11 @@ bash install.sh</pre></li>
       </section>
       <section>
         <h2 class="side">Downloads</h2>
+        <h3 class="sub">Amiga</h3>
+        <ul>
+          <li><a href="#epsilons-cd-player">Epsilon's CD Player</a></li>
+        </ul>
+        <h3 class="sub">Mac</h3>
         <ul>
           <li><a href="#ap30-music-boy-sync">Epsilon's AP30 Music Boy Sync</a></li>
         </ul>
@@ -181,5 +269,19 @@ bash install.sh</pre></li>
   </div>
   <footer>© 2026 EpsilonsWorld.com · <a href="https://www.epsilonsworld.com">www.EpsilonsWorld.com</a></footer>
 </div>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filter button'), secs=document.querySelectorAll('.platform');
+  function show(p){
+    btns.forEach(function(b){b.classList.toggle('on',b.dataset.show===p)});
+    secs.forEach(function(s){s.hidden=!(p==='all'||s.dataset.platform===p)});
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.show);try{history.replaceState(null,'',b.dataset.show==='all'?location.pathname:'#'+b.dataset.show)}catch(e){}})});
+  window.addEventListener('hashchange',function(){var el=document.getElementById(location.hash.slice(1)); if(el&&el.closest('.platform')&&el.closest('.platform').hidden){show('all'); el.scrollIntoView();}});
+  var h=location.hash.slice(1);
+  if(h==='amiga'||h==='mac')show(h);
+  else if(h){var el=document.getElementById(h); if(el){var sec=el.closest('.platform'); if(sec) show('all');}}
+})();
+</script>
 </body>
 </html>
