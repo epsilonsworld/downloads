@@ -20,7 +20,14 @@
     box-shadow:0 1px 15px rgba(0,0,0,.35)}
   header a{display:block;border-radius:12px;overflow:hidden;line-height:0}
   header img{width:100%;height:auto;display:block}
-  .cols{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:26px;margin-top:22px;padding:0 10px}
+  .cols{display:grid;grid-template-columns:190px minmax(0,1fr) 230px;grid-template-areas:"left main right";gap:24px;margin-top:22px;padding:0 10px}
+  .cols>main{grid-area:main} .cols>aside.right{grid-area:right} .cols>aside.left{grid-area:left}
+  .support{position:sticky;top:16px}
+  .support .kofi{display:block;border-radius:10px;overflow:hidden;line-height:0;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .support .kofi img{width:100%;height:auto;display:block}
+  .support .kofi:hover{box-shadow:0 3px 12px rgba(0,0,0,.45)}
+  .support p{font-size:14px;margin:10px 0 0}
+  @media (max-width:1060px){.cols{grid-template-columns:minmax(0,1fr) 230px;grid-template-areas:"main right" "main left"} .support{position:static}}
   h2.side,.date{font-size:13.5px;font-weight:bold;text-transform:uppercase;color:var(--head);margin:0 0 8px;letter-spacing:.02em}
   .date{color:#222}
   .card{background:var(--card);border-radius:12px;padding:20px 26px 26px;box-shadow:0 1px 4px rgba(0,0,0,.15);margin-bottom:26px}
@@ -127,7 +134,7 @@
   .logo{display:block;width:120px;border-radius:14px;margin:4px 0 10px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
   footer{text-align:center;font-size:13px;color:#444;padding:6px 0 4px}
   @media (max-width:860px){
-    body{padding:10px 6px 24px} .outer{padding:8px;border-radius:12px} .cols{grid-template-columns:minmax(0,1fr);padding:0 2px} .stage{height:230px} .ap30{height:195px} .mac{top:44px}
+    body{padding:10px 6px 24px} .outer{padding:8px;border-radius:12px} .cols{grid-template-columns:minmax(0,1fr);grid-template-areas:"main" "right" "left";padding:0 2px} .support .kofi{max-width:220px} .stage{height:230px} .ap30{height:195px} .mac{top:44px}
     .hero .t{font-size:22px} .hero{padding:16px 10px 16px} .pair{grid-template-columns:1fr} .prod{grid-template-columns:1fr} .members{columns:1} .tracks{columns:1} .album{grid-template-columns:120px 1fr} .album .cover{width:120px;height:auto} .gallery{grid-template-columns:1fr} .card{padding:16px 16px 20px}
   }
 </style>
@@ -234,10 +241,10 @@
         <div class="dl">
           <a data-goatcounter-click="download/Epsilons-AP30-Music-Boy-Sync.zip" data-goatcounter-title="Download Epsilons-AP30-Music-Boy-Sync.zip" class="btn" href="https://github.com/epsilonsworld/downloads/releases/download/v3.0.1/Epsilons-AP30-Music-Boy-Sync.zip">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 10l6 6 6-6M4 20h16"/></svg>
-            <span>Download for macOS<small>Program and manual · zip, about 6.5 MB</small></span></a>
+            <span>Download for macOS<small>Program and manual · zip, about 13 MB</small></span></a>
           <a data-goatcounter-click="download/Epsilons-AP30-Music-Boy-Sync-Manual.pdf" data-goatcounter-title="Download Epsilons-AP30-Music-Boy-Sync-Manual.pdf" class="btn alt" href="https://github.com/epsilonsworld/downloads/releases/download/v3.0.1/Epsilons-AP30-Music-Boy-Sync-Manual.pdf">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg>
-            <span>User manual<small>PDF, 26 pages</small></span></a>
+            <span>User manual<small>PDF, 30 pages</small></span></a>
         </div>
         <p class="fine">Freeware · No warranty of any kind — use at your own risk. Older versions and release notes: <a href="https://github.com/epsilonsworld/downloads/releases">all releases</a>.</p>
 
@@ -438,7 +445,15 @@ bash install.sh</pre></li>
       </section>
     </main>
 
-    <aside>
+    <aside class="left">
+      <section class="support">
+        <h2 class="side">Please support me</h2>
+        <a class="kofi" href="https://ko-fi.com/epsilonsworld" target="_blank" rel="noopener" data-goatcounter-click="outbound/ko-fi" data-goatcounter-title="Ko-fi support (image)" title="Support Epsilon's World on Ko-fi"><img src="images/kofi-support.jpg" alt="Support Epsilon's World on Ko-fi — ko-fi.com/epsilonsworld" width="400" height="711" loading="lazy"></a>
+        <p>If you enjoy my software and music, you can buy me a coffee on <a href="https://ko-fi.com/epsilonsworld" target="_blank" rel="noopener" data-goatcounter-click="outbound/ko-fi" data-goatcounter-title="Ko-fi support (link)">Ko-fi</a>. Thank you!</p>
+      </section>
+    </aside>
+
+    <aside class="right">
       <section>
         <h2 class="side">About</h2>
         <a href="https://www.epsilonsworld.com"><img class="logo" src="images/epsilon-logo.png" alt="Epsilon logo"></a>
