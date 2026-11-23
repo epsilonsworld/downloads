@@ -23,6 +23,9 @@
   .cols{display:grid;grid-template-columns:190px minmax(0,1fr) 230px;grid-template-areas:"left main right";gap:24px;margin-top:22px;padding:0 10px}
   .cols>main{grid-area:main} .cols>aside.right{grid-area:right} .cols>aside.left{grid-area:left}
   .support{position:sticky;top:16px}
+  .translate{min-height:58px}
+  #google_translate_element .goog-te-gadget-simple{background:#fff;border:1px solid #c4c8d4;border-radius:4px;padding:6px 8px;font-size:14px;line-height:1.4;display:inline-block}
+  #google_translate_element .goog-te-gadget-simple a{color:#222;text-decoration:none}
   .support .kofi{display:block;border-radius:10px;overflow:hidden;line-height:0;box-shadow:0 2px 8px rgba(0,0,0,.3)}
   .support .kofi img{width:100%;height:auto;display:block}
   .support .kofi:hover{box-shadow:0 3px 12px rgba(0,0,0,.45)}
@@ -446,6 +449,10 @@ bash install.sh</pre></li>
     </main>
 
     <aside class="left">
+      <section class="translate">
+        <h2 class="side">Translate</h2>
+        <div id="google_translate_element"></div>
+      </section>
       <section class="support">
         <h2 class="side">Please support me</h2>
         <a class="kofi" href="https://ko-fi.com/epsilonsworld" target="_blank" rel="noopener" data-goatcounter-click="outbound/ko-fi" data-goatcounter-title="Ko-fi support (image)" title="Support Epsilon's World on Ko-fi"><img src="images/kofi-support.jpg" alt="Support Epsilon's World on Ko-fi — ko-fi.com/epsilonsworld" width="400" height="711" loading="lazy"></a>
@@ -524,5 +531,11 @@ bash install.sh</pre></li>
   audio.addEventListener('ended',function(){ var n=cur+1; if(n<btns.length && btns[n].closest('.album')===btns[cur].closest('.album')) play(n); else btns[cur].classList.remove('playing'); });
 })();
 </script>
+<script>
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 </body>
 </html>
