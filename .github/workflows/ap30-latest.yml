@@ -57,12 +57,17 @@ jobs:
           except (OSError, ValueError):
               pass
           # one-line summary: the first bullet of the release notes
-          notes = ""
-          for line in (rel.get("body") or "").splitlines():
-              line = line.strip()
-              if line.startswith(("- ", "* ", "• ")):
-                  notes = re.sub(r"[*_`]", "", line[2:]).strip()
-                  break
+          lines = [l.strip() for l in (rel.get("body") or "").splitlines()]
+          notes = next((l[2:] for l in lines if l.startswith(("- ", "* ", "• "))), "")
+          if not notes:          # no bullets: the first line after "What's new"
+              after = False
+              for l in lines:
+                  if "what's new" in l.lower() or "what’s new" in l.lower():
+                      after = True
+                  elif after and l:
+                      notes = l
+                      break
+          notes = re.sub(r"[*_`#]", "", notes).strip()
           if len(notes) > 160:
               notes = notes[:157].rsplit(" ", 1)[0] + "…"
           info = {"version": version,
