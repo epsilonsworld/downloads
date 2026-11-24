@@ -1,0 +1,89 @@
+# Keeps ap30/latest.json up to date, so copies of Epsilon's AP30 Music Boy Sync can find
+# new versions by themselves. Runs when a release is published; only AP30 releases
+# (tags like v3.1) count - CD Player releases (cdplayer-v...) are ignored.
+name: AP30 latest version
+
+on:
+  release:
+    types: [published, edited]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to publish as the latest AP30 version (e.g. v3.1)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ap30-latest
+  cancel-in-progress: false
+
+jobs:
+  latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Write ap30/latest.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, subprocess, sys
+          tag = os.environ["TAG"]
+          if not re.fullmatch(r"v\d+(\.\d+)*", tag):
+              print(f"{tag} is not an AP30 release - nothing to do"); sys.exit(0)
+          rel = json.loads(subprocess.check_output(
+              ["gh", "api", f"repos/{os.environ['GITHUB_REPOSITORY']}/releases/tags/{tag}"]))
+          if rel.get("draft") or rel.get("prerelease"):
+              print("draft or pre-release - skipped"); sys.exit(0)
+          zips = [a for a in rel["assets"] if a["name"] == "Epsilons-AP30-Music-Boy-Sync.zip"]
+          if not zips:
+              sys.exit("The release has no Epsilons-AP30-Music-Boy-Sync.zip")
+          a = zips[0]
+          sha = (a.get("digest") or "").removeprefix("sha256:")
+          if not re.fullmatch(r"[0-9a-f]{64}", sha):
+              subprocess.check_call(["gh", "release", "download", tag, "-p", a["name"], "-D", "/tmp/rel"])
+              import hashlib
+              sha = hashlib.sha256(open("/tmp/rel/" + a["name"], "rb").read()).hexdigest()
+          version = tag[1:]
+          vt = lambda v: tuple(int(x) for x in re.findall(r"\d+", v))
+          path = "ap30/latest.json"
+          try:
+              old = json.load(open(path))
+              if vt(old.get("version", "0")) > vt(version):
+                  print(f"latest.json already has {old['version']}, newer than {version} - kept"); sys.exit(0)
+          except (OSError, ValueError):
+              pass
+          # one-line summary: the first bullet of the release notes
+          notes = ""
+          for line in (rel.get("body") or "").splitlines():
+              line = line.strip()
+              if line.startswith(("- ", "* ", "• ")):
+                  notes = re.sub(r"[*_`]", "", line[2:]).strip()
+                  break
+          if len(notes) > 160:
+              notes = notes[:157].rsplit(" ", 1)[0] + "…"
+          info = {"version": version,
+                  "url": a["browser_download_url"],
+                  "sha256": sha,
+                  "size": a["size"],
+                  "notes": notes,
+                  "page": rel["html_url"],
+                  "date": (rel.get("published_at") or "")[:10]}
+          os.makedirs("ap30", exist_ok=True)
+          with open(path, "w") as fh:
+              json.dump(info, fh, indent=2, ensure_ascii=False)
+              fh.write("\n")
+          print(json.dumps(info, indent=2))
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ap30/latest.json
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "AP30 latest version: ${{ github.event.release.tag_name || inputs.tag }}"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
