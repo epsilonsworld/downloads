@@ -5,7 +5,7 @@ Download page: **https://downloads.epsilonsworld.com**
 | Software | Platform | Download |
 |---|---|---|
 | Epsilon's CD Player | Amiga | [Version 7.12](https://github.com/epsilonsworld/downloads/releases/tag/cdplayer-v7.12) |
-| Epsilon's AP30 Music Boy Sync | macOS | [Version 3.0.1](https://github.com/epsilonsworld/downloads/releases/tag/v3.0.1) |
+| Epsilon's AP30 Music Boy Sync | macOS | [Version 3.1](https://github.com/epsilonsworld/downloads/releases/tag/v3.1) |
 | Illumination (2005) and View of Life EP (2004) | Music (MP3) | [`music/`](music) |
 | The Experience — terminal (1998) and T.L.A. (1997) | Amiga AGA demos, mods and source | [`archive/`](archive) |
 
