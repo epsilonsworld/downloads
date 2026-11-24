@@ -1,9 +1,9 @@
 {
-  "version": "3.1.2.1",
-  "url": "https://downloads.epsilonsworld.com/ap30/test/ap30-sync-test-3.1.2.1.zip",
-  "sha256": "ca3fc141a8d97784a0e2f249bb3e6efeae28ae940233aef41e49c96372e35618",
-  "size": 12999369,
-  "notes": "TEST BUILD - only offered to Macs on the test channel.",
+  "version": "3.1.3",
+  "url": "https://downloads.epsilonsworld.com/ap30/test/ap30-sync-test-3.1.3.zip",
+  "sha256": "12e36742af93530e7c4ee6f4bc11190134ea4d1fb76e102267a368effc1927fb",
+  "size": 12999563,
+  "notes": "Release candidate 3.1.3 (test channel only).",
   "page": "https://downloads.epsilonsworld.com/",
   "date": "2026-11-24"
 }
