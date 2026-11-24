@@ -1,9 +1,9 @@
 {
-  "version": "3.0.1",
-  "url": "https://github.com/epsilonsworld/downloads/releases/download/v3.0.1/Epsilons-AP30-Music-Boy-Sync.zip",
-  "sha256": "a54dd04aec1e3ab28c7b3cb57547bb7b7ab849b647da88b2ddacb43a98815c01",
-  "size": 12903893,
-  "notes": "The program and installer now only use helper programs (ImageMagick, ffmpeg) that actually run. Old PowerPC / 32-bit Intel copies left behind by earlier…",
-  "page": "https://github.com/epsilonsworld/downloads/releases/tag/v3.0.1",
-  "date": "2026-11-23"
+  "version": "3.1",
+  "url": "https://github.com/epsilonsworld/downloads/releases/download/v3.1/Epsilons-AP30-Music-Boy-Sync.zip",
+  "sha256": "cb8a03af640e0b099b8e2159fd365dbe2c2dc26a3eb730a8104a3b63e77deb50",
+  "size": 12977245,
+  "notes": "Automatic updates: the program now checks for new versions when it opens (at most once a day) and can download, verify and install them itself with one…",
+  "page": "https://github.com/epsilonsworld/downloads/releases/tag/v3.1",
+  "date": "2026-11-24"
 }
