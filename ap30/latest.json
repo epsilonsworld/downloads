@@ -1,9 +1,9 @@
 {
-  "version": "3.1.1",
-  "url": "https://github.com/epsilonsworld/downloads/releases/download/v3.1.1/Epsilons-AP30-Music-Boy-Sync.zip",
-  "sha256": "d524346223175eccde9703aa6b5a75d6cbcc9c6bff9315f0ddb56830af04dc7f",
-  "size": 12996069,
-  "notes": "Two playlists can no longer be given the same name. Before, the second one was synced into its own folder (e.g. \"Bonobo (2)\"), duplicating every song. The…",
-  "page": "https://github.com/epsilonsworld/downloads/releases/tag/v3.1.1",
+  "version": "3.1",
+  "url": "https://github.com/epsilonsworld/downloads/releases/download/v3.1/Epsilons-AP30-Music-Boy-Sync.zip",
+  "sha256": "cb8a03af640e0b099b8e2159fd365dbe2c2dc26a3eb730a8104a3b63e77deb50",
+  "size": 12977245,
+  "notes": "Update paused while an installer problem is fixed.",
+  "page": "https://github.com/epsilonsworld/downloads/releases/tag/v3.1",
   "date": "2026-11-24"
 }
