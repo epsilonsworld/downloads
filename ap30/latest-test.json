@@ -1,9 +1,9 @@
 {
-  "version": "3.1.6",
-  "url": "https://downloads.epsilonsworld.com/ap30/test/ap30-sync-test-3.1.6.zip",
-  "sha256": "138a935892b9715a2cb391bb1f4f1f5a112567fb85fc981fe9d91f47f0f46a7c",
-  "size": 13005260,
-  "notes": "Release candidate 3.1.6 (test channel only).",
+  "version": "3.1.7",
+  "url": "https://downloads.epsilonsworld.com/ap30/test/ap30-sync-test-3.1.7.zip",
+  "sha256": "bf3791f95600c65644d823b0e4eacd182dabe423f914585bed2272ae883bdc5c",
+  "size": 13007012,
+  "notes": "Release candidate 3.1.7 (test channel only).",
   "page": "https://downloads.epsilonsworld.com/",
   "date": "2026-11-25"
 }
